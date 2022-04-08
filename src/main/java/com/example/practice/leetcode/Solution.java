@@ -41,7 +41,7 @@ class Solution {
 
             boolean divisibleBy3 = i % 3 == 0;
             boolean divisibleBy5 = i % 5 == 0;
-//            boolean divisibleBy7 = i % 7 ==0;
+            boolean divisibleBy7 = i % 7 ==0;
 
             //value?
             if (divisibleBy3) {
@@ -52,15 +52,12 @@ class Solution {
                 fizzBuzz.append("Buzz");
             }
 
-//            if(divisibleBy7){
+            if(divisibleBy7){
 //                fizzBuzz.setLength(0);
-//                fizzBuzz.append("Alex");
-//            }
+                fizzBuzz.append("Alex");
+            }
 
-//            if(!divisibleBy3 && !divisibleBy5 && !divisibleBy7){
-//                fizzBuzz.append(i);
-//            }
-            if (!divisibleBy3 && !divisibleBy5) {
+            if(!divisibleBy3 && !divisibleBy5 && !divisibleBy7){
                 fizzBuzz.append(i);
             }
 
