@@ -32,4 +32,13 @@ class SolutionTest {
         assertEquals(List.of("1","2","Fizz","4","Buzz", "Fizz", "Alex"), new Solution().fizzBuzz(7));
     }
 
+    @Test
+    void n_is_21() {
+        assertEquals(List.of("1","2","Fizz","4","Buzz","Fizz",
+                "Alex","8","Fizz","Buzz","11","Fizz",
+                "13","Alex","FizzBuzz",
+                "16","17","Fizz",
+                "19","Buzz","FizzAlex"
+        ), new Solution().fizzBuzz(21));
+    }
 }
