@@ -22,5 +22,8 @@ class SolutionTest {
         assertEquals(List.of("1", "2", "Fizz"), new Solution().fizzBuzz(3));
     }
 
-
+    @Test
+    void n_is_5() {
+        assertEquals(List.of("1","2","Fizz","4","Buzz"), new Solution().fizzBuzz(5));
+    }
 }
