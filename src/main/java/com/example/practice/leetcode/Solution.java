@@ -35,29 +35,32 @@ import java.util.List;
 class Solution {
     public List<String> fizzBuzz(int n) {
         ArrayList<String> result = new ArrayList<>();
-        for (int i =1;i <= n;i++){
+        for (int i = 1; i <= n; i++) {
 
             StringBuilder fizzBuzz = new StringBuilder();
 
-            boolean divisibleBy3 = i % 3 ==0;
-            boolean divisibleBy5 = i % 5 ==0;
-            boolean divisibleBy7 = i % 7 ==0;
+            boolean divisibleBy3 = i % 3 == 0;
+            boolean divisibleBy5 = i % 5 == 0;
+//            boolean divisibleBy7 = i % 7 ==0;
 
             //value?
-            if(divisibleBy3){
+            if (divisibleBy3) {
                 fizzBuzz.append("Fizz");
             }
 
-            if(divisibleBy5){
+            if (divisibleBy5) {
                 fizzBuzz.append("Buzz");
             }
 
-            if(divisibleBy7){
-                fizzBuzz.setLength(0);
-                fizzBuzz.append("Alex");
-            }
+//            if(divisibleBy7){
+//                fizzBuzz.setLength(0);
+//                fizzBuzz.append("Alex");
+//            }
 
-            if(!divisibleBy3 && !divisibleBy5 && !divisibleBy7){
+//            if(!divisibleBy3 && !divisibleBy5 && !divisibleBy7){
+//                fizzBuzz.append(i);
+//            }
+            if (!divisibleBy3 && !divisibleBy5) {
                 fizzBuzz.append(i);
             }
 
