@@ -34,38 +34,30 @@ import java.util.List;
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public List<String> fizzBuzz(int n) {
+        List<Integer> divisors = List.of(3, 5, 7);
+        List<String> strings = List.of("Fizz", "Buzz", "Alex");
+
         ArrayList<String> result = new ArrayList<>();
         for (int i = 1; i <= n; i++) {
 
-            StringBuilder fizzBuzz = new StringBuilder();
+            String resultStr = "";
+            for (int divisorsIdx = 0; divisorsIdx < divisors.size(); divisorsIdx++) {
 
-            boolean divisibleBy3 = i % 3 == 0;
-            boolean divisibleBy5 = i % 5 == 0;
-            boolean divisibleBy7 = i % 7 ==0;
-
-            //value?
-            if (divisibleBy3) {
-                fizzBuzz.append("Fizz");
+                boolean divisible = i % divisors.get(divisorsIdx) == 0;
+                if (divisible) {
+                    resultStr = resultStr + strings.get(divisorsIdx);
+                }
             }
 
-            if (divisibleBy5) {
-                fizzBuzz.append("Buzz");
+            if(resultStr.isEmpty()){
+                resultStr = String.valueOf(i);
             }
 
-            if(divisibleBy7){
-//                fizzBuzz.setLength(0);
-                fizzBuzz.append("Alex");
-            }
-
-            if(!divisibleBy3 && !divisibleBy5 && !divisibleBy7){
-                fizzBuzz.append(i);
-            }
-
-            //add to result
-            result.add(fizzBuzz.toString());
+            result.add(resultStr);
 
         }
         return result;
     }
+
 }
 //leetcode submit region end(Prohibit modification and deletion)

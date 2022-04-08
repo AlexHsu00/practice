@@ -25,10 +25,6 @@ class SolutionTest {
 
     @Test
     void n_is_7() {
-        //n = 7
-        // n = 21
-        // n = 35
-        // n = 105
         assertEquals(List.of("1","2","Fizz","4","Buzz", "Fizz", "Alex"), new Solution().fizzBuzz(7));
     }
 
