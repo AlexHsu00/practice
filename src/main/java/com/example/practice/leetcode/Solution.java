@@ -28,28 +28,30 @@ package com.example.practice.leetcode;//Given an integer n, return a string arra
 // Related Topics Math String Simulation 👍 279 👎 49
 
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public List<String> fizzBuzz(int n) {
-        List<Integer> divisors = List.of(3, 5, 7);
-        List<String> strings = List.of("Fizz", "Buzz", "Alex");
+
+        Map<Integer, String> integerStringMap = Map.of(
+                3, "Fizz",
+                5, "Buzz",
+                7, "Alex");
+
+        new TreeMap<Integer, String>().putAll(integerStringMap);
 
         ArrayList<String> result = new ArrayList<>();
         for (int i = 1; i <= n; i++) {
 
             String resultStr = "";
-            for (int divisorsIdx = 0; divisorsIdx < divisors.size(); divisorsIdx++) {
-
-                boolean divisible = i % divisors.get(divisorsIdx) == 0;
-                if (divisible) {
-                    resultStr = resultStr + strings.get(divisorsIdx);
+            for (Map.Entry<Integer, String> entry : integerStringMap.entrySet()) {
+                if (i % entry.getKey() == 0) {
+                    resultStr = resultStr + entry.getValue();
                 }
             }
 
-            if(resultStr.isEmpty()){
+            if (resultStr.isEmpty()) {
                 resultStr = String.valueOf(i);
             }
 
