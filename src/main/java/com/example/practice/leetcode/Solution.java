@@ -34,12 +34,11 @@ import java.util.*;
 class Solution {
     public List<String> fizzBuzz(int n) {
 
-        Map<Integer, String> integerStringMap = Map.of(
-                3, "Fizz",
-                5, "Buzz",
-                7, "Alex");
+        Map<Integer, String> integerStringMap = new TreeMap<Integer, String>();
+        integerStringMap.put(3, "Fizz");
+        integerStringMap.put(5, "Buzz");
+        integerStringMap.put(7, "Alex");
 
-        new TreeMap<Integer, String>().putAll(integerStringMap);
 
         ArrayList<String> result = new ArrayList<>();
         for (int i = 1; i <= n; i++) {
