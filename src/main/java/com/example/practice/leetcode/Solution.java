@@ -43,21 +43,27 @@ class Solution {
         ArrayList<String> result = new ArrayList<>();
         for (int i = 1; i <= n; i++) {
 
-            String resultStr = "";
-            for (Map.Entry<Integer, String> entry : integerStringMap.entrySet()) {
-                if (i % entry.getKey() == 0) {
-                    resultStr = resultStr + entry.getValue();
-                }
+            String fizzBuzz = "";
+            fizzBuzz = divisorAndCompositString(integerStringMap, i);
+
+            if (fizzBuzz.isEmpty()) {
+                fizzBuzz = String.valueOf(i);
             }
 
-            if (resultStr.isEmpty()) {
-                resultStr = String.valueOf(i);
-            }
-
-            result.add(resultStr);
+            result.add(fizzBuzz);
 
         }
         return result;
+    }
+
+    private String divisorAndCompositString(Map<Integer, String> integerStringMap, int i) {
+        String fizzBuzz = "";
+        for (Map.Entry<Integer, String> entry : integerStringMap.entrySet()) {
+            if (i % entry.getKey() == 0) {
+                fizzBuzz = fizzBuzz + entry.getValue();
+            }
+        }
+        return fizzBuzz;
     }
 
 }
