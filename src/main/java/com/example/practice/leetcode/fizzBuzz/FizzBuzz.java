@@ -1,4 +1,4 @@
-package com.example.practice.leetcode;//Given an integer n, return a string array answer (1-indexed) where:
+package com.example.practice.leetcode.fizzBuzz;//Given an integer n, return a string array answer (1-indexed) where:
 //
 // 
 // answer[i] == "FizzBuzz" if i is divisible by 3 and 5. 
@@ -31,7 +31,7 @@ package com.example.practice.leetcode;//Given an integer n, return a string arra
 import java.util.*;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class FizzBuzz {
     public List<String> fizzBuzz(int n) {
 
         Map<Integer, String> integerStringMap = new TreeMap<Integer, String>();

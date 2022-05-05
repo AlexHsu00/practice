@@ -1,4 +1,4 @@
-package com.example.practice.leetcode;
+package com.example.practice.leetcode.fizzBuzz;
 
 import org.junit.jupiter.api.Test;
 
@@ -6,26 +6,26 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SolutionTest {
+class FizzBuzzTest {
 
     @Test
     public void n_is_3() {
-        assertEquals(List.of("1", "2", "Fizz"), new Solution().fizzBuzz(3));
+        assertEquals(List.of("1", "2", "Fizz"), new FizzBuzz().fizzBuzz(3));
     }
 
     @Test
     void n_is_5() {
-        assertEquals(List.of("1","2","Fizz","4","Buzz"), new Solution().fizzBuzz(5));
+        assertEquals(List.of("1","2","Fizz","4","Buzz"), new FizzBuzz().fizzBuzz(5));
     }
 
     @Test
     void n_is_15() {
-        assertEquals(List.of("1","2","Fizz","4","Buzz","Fizz","Alex","8","Fizz","Buzz","11","Fizz","13","Alex","FizzBuzz"), new Solution().fizzBuzz(15));
+        assertEquals(List.of("1","2","Fizz","4","Buzz","Fizz","Alex","8","Fizz","Buzz","11","Fizz","13","Alex","FizzBuzz"), new FizzBuzz().fizzBuzz(15));
     }
 
     @Test
     void n_is_7() {
-        assertEquals(List.of("1","2","Fizz","4","Buzz", "Fizz", "Alex"), new Solution().fizzBuzz(7));
+        assertEquals(List.of("1","2","Fizz","4","Buzz", "Fizz", "Alex"), new FizzBuzz().fizzBuzz(7));
     }
 
     @Test
@@ -35,7 +35,7 @@ class SolutionTest {
                 "13","Alex","FizzBuzz",
                 "16","17","Fizz",
                 "19","Buzz","FizzAlex"
-        ), new Solution().fizzBuzz(21));
+        ), new FizzBuzz().fizzBuzz(21));
     }
 
     @Test
@@ -50,6 +50,6 @@ class SolutionTest {
                 "Alex","29","FizzBuzz",
                 "31","32","Fizz",
                 "34","BuzzAlex"
-        ), new Solution().fizzBuzz(35));
+        ), new FizzBuzz().fizzBuzz(35));
     }
 }
